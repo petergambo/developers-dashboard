@@ -36,9 +36,9 @@ const DevsListSection: React.FC = () => {
     setReload(false)
   }, [reload]);
 
-  const reloadComponent = ()=>{
-    setReload(true)
-  }
+//   const reloadComponent = ()=>{
+//     setReload(true)
+//   }
 
   return (
     <div>
