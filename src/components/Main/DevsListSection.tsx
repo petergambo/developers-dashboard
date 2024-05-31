@@ -33,7 +33,12 @@ const DevsListSection: React.FC = () => {
     });
 
     setPersons(devDataService.getAll());
+    setReload(false)
   }, [reload]);
+
+  const reloadComponent = ()=>{
+    setReload(true)
+  }
 
   return (
     <div>
