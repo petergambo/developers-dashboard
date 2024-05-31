@@ -1,0 +1,35 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+@import './style.css'; /* This line imports your custom styles */
+
+
+@font-face {
+    font-family: "Regular";
+    src: local("SpaceGrotesk-Regular"),
+    url(./assets/fonts/SpaceGrotesk-Regular.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: "Medium";
+    src: local("SpaceGrotesk-Medium"),
+    url(./assets/fonts/SpaceGrotesk-Medium.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: "Bold";
+    src: local("SpaceGrotesk-Bold"),
+    url(./assets/fonts/SpaceGrotesk-Bold.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: "SemiBold";
+    src: local("SpaceGrotesk-SemiBold"),
+    url(./assets/fonts/SpaceGrotesk-SemiBold.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: "Light";
+    src: local("SpaceGrotesk-Light"),
+    url(./assets/fonts/SpaceGrotesk-Light.ttf) format("truetype");
+}

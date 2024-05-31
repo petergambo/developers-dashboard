@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.border-gradient-custom {
+    @apply border-2 rounded-[50px]; /* Tailwind utility classes */
+  border-image: linear-gradient(109.15deg, #FBDA61 0%, #FF5ACD 86.08%);
+  border-image-slice: 1;
+  
+}
