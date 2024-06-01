@@ -2,6 +2,7 @@
 import AdsCard from './AdsCard';
 import DevsChildCard from './DevsChildCard';
 import { Dev } from '../../models/DevModel';
+import HorizontalScrollWrapper from './Layout/HorizontalScrollWrapper';
 
 
 type DevelopersCardProps = {
@@ -19,7 +20,7 @@ const DevelopersCard: React.FC<DevelopersCardProps> = ({ person, isFirst = false
         {/* Details Div */}
         <div className="flex-1 flex flex-col gap-1">
           <h4 className="leading-[30px] md:leading-[20px] text-[18px] md:text-[20px] font-bold">{person.firstName + ' ' + person.lastName}</h4>
-          <p className="text-[#888888] mt-1 text-[14px] md:text-[16px] font-medium">{person.address}{'\n'} N20,000</p>
+          <p className="text-[#888888] mt-1 text-[14px] md:text-[16px] font-medium">{person.address}{'\n'} N200,000 (NGN)</p>
           <p className=" font-bold text-nowrap text-[12px] leading-[16px] md:text-[14px] md:leading-[20px] border border-[#FEFEFE] px-[10px] py-[4px] self-start rounded-[20px]">
             {person.specialty} 
           </p>
@@ -34,8 +35,7 @@ const DevelopersCard: React.FC<DevelopersCardProps> = ({ person, isFirst = false
       </div>
 
       {/* Portfolio Slider */}
-      <div className="container h-[172px] ">
-        <div className="flex overflow-x-auto space-x-4 hide-scrollbar">
+      <HorizontalScrollWrapper>
           <div className="flex-none w-[280px] sm:w-[50%] md:w-[320px] lg:w-[calc(33.33%-1rem)] xl:w-[calc(33.33%-1rem)]">
             <DevsChildCard
               title="My_Resume"
@@ -58,8 +58,7 @@ const DevelopersCard: React.FC<DevelopersCardProps> = ({ person, isFirst = false
               updatedAt={new Date(Date.now())}
             />
           </div>
-        </div>
-      </div>
+          </HorizontalScrollWrapper>
       {/* CardEnd */}
     </div>
   );

@@ -2,6 +2,7 @@ import SearchIcon from "../../../assets/search_flow_mobile.svg";
 import MobileMenuIcon from "../../../assets/menu_mobile.svg";
 import FilterIcon from "../../../assets/filter.svg";
 import MobileSearchCategoriesSection from "./MobileSearchCategoriesSection";
+import HorizontalScrollWrapper from "../Layout/HorizontalScrollWrapper";
 
 const MobileHeader = () => {
   return (
@@ -36,7 +37,9 @@ const MobileHeader = () => {
           </button>
         </div>
       </section>
-      <MobileSearchCategoriesSection />
+      <HorizontalScrollWrapper>
+          <MobileSearchCategoriesSection />
+      </HorizontalScrollWrapper>
     </header>
   );
 };
