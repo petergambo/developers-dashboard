@@ -1,4 +1,3 @@
-import FilterIcon from "../../assets/filter.svg";
 import { useAppContext } from "../../../context/AppContext";
 
 const MobileSearchCategoriesSection = () => {

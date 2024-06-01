@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import ProfileMain from "../assets/profile-main.svg";
 import BottomNavListSection from "./Sidebar/BottomNavlist";
 import MainNavListSection from "./Sidebar/MainNavlist";
