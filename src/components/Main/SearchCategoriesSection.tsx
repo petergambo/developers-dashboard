@@ -37,7 +37,7 @@ const ListCard: React.FC<ListCardProp>  = ({name})=>{
     )
   }
     return(
-        <section className="flex gap-4 justify-between">
+        <section className="hidden md:flex gap-4 justify-between">
           <ul className="flex gap-2">
              {categoryOptions.map(category=> {
               return(<ListCard name={category} />)

@@ -20,14 +20,14 @@ const DevelopersCard: React.FC<DevelopersCardProps> = ({ person, isFirst = false
         <div className="flex-1 flex flex-col gap-1">
           <h4 className="leading-[20px] text-[20px] font-bold">{person.firstName + ' ' + person.lastName}</h4>
           <p className="text-[#888888] text-[16px] font-medium">{person.address}</p>
-          <p className=" font-bold text-[14px] leading-[20px] border border-[#FEFEFE] px-[10px] py-[4px] self-start rounded-[20px]">
-            {person.specialty}
+          <p className=" font-bold text-nowrap text-[12px] md:text-[14px] leading-[20px] border border-[#FEFEFE] px-[10px] py-[4px] self-start rounded-[20px]">
+            {person.specialty} 
           </p>
         </div>
 
         {/* Hire Button */}
         <div>
-          <button className="bg-[#FDD649] rounded-[30px] px-[16px] py-[8px] text-[#121212] leading-[24px] font-medium">
+          <button className="bg-[#FDD649] text-nowrap rounded-[30px] px-[16px] py-[8px] text-[#121212] leading-[24px] font-medium">
             Hire Me
           </button>
         </div>

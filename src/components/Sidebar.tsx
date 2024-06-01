@@ -18,7 +18,7 @@ const Sidebar = () => {
   }, [isWide]);
 
   return (
-    <aside className={`fixed h-screen flex flex-col bg-[#121212] p-4 transition-width duration-300 ${isCollapsed ? 'w-16' : 'w-1/5'}`}>
+    <aside className={` hidden md:flex relative md:fixed h-screen  flex-col bg-[#121212] p-4 transition-width duration-300 ${isCollapsed ? 'w-16' : 'w-1/5'}`}>
       {/* Toggle Button */}
     
 

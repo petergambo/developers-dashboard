@@ -6,7 +6,7 @@ interface Props {
 
 const PaddedContainer: React.FC<Props> = ({ children }) => {
   return (
-    <div className="px-16 flex flex-col gap-5 py-4">
+    <div className="px-4 md:px-16 flex flex-col gap-5 py-4">
       {children}
     </div>
   );
