@@ -7,7 +7,7 @@ import PaddedContainer from "./Layout/PaddedContainer";
 const Main = () => {
 
   return (
-    <main className={`ml-0 md:ml-16 transition-margin duration-300 bg-[#121212] border border-[#1E1E1E] pt-1 text-[#FEFEFE] lg:ml-[20%]`}>
+    <main className={`overflow-hidden ml-0 md:ml-16 transition-margin duration-300 bg-[#121212] border border-[#1E1E1E] pt-1 text-[#FEFEFE] lg:ml-[20%]`}>
       {/* Header */}
       <HeaderSection />
 

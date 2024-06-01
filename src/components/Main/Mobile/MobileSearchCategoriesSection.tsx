@@ -21,7 +21,7 @@ const ListCard: React.FC<ListCardProp>  = ({name})=>{
       <>
       {isSelected ? 
     <li>
-      <div onClick={()=>handleClick(name)} className="flex flex-nowrap text-nowrap px-[12px] text-[12px] py-[4px] border-gradient-custom">
+      <div onClick={()=>handleClick(name)} className="flex flex-nowrap text-nowrap px-[12px] text-[14px] py-[4px] border-gradient-custom">
         {name}
       </div> 
     </li>
