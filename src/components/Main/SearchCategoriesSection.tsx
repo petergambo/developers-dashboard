@@ -1,29 +1,47 @@
 import FilterIcon from "../../assets/filter.svg";
+import { useAppContext } from "../../context/AppContext";
 
 const SearchCategoriesSection = () => {
+
+  const { selectedSearchCategory, setSelectedSearchCategory } = useAppContext();
+
+  const handleClick = (name: string) => {
+    setSelectedSearchCategory(name);
+  };
+
+const categoryOptions = ["Frontend Developer", "Backend Developer", "Data Scientist", "Fullstack Developer"]
+
+interface ListCardProp {
+  name: string
+}
+  
+const ListCard: React.FC<ListCardProp>  = ({name})=>{
+    
+  const isSelected: boolean = selectedSearchCategory === name ;
+    return(
+      <>
+      {isSelected ? 
+    <li>
+      <button onClick={()=>handleClick(name)} className="px-[24px] py-[8px] border-gradient-custom">
+        {name}
+      </button>
+    </li>
+    :
+    <li>
+      <button onClick={()=>handleClick(name)} className="bg-[#1E1E1E] px-[24px] py-[8px] border border-[#292929] rounded-[10px]">
+      {name}
+      </button>
+    </li>
+  }
+    </>
+    )
+  }
     return(
         <section className="flex gap-4 justify-between">
           <ul className="flex gap-2">
-            <li>
-              <button className="px-[24px] py-[8px] border-gradient-custom">
-                Discover
-              </button>
-            </li>
-            <li>
-              <button className="bg-[#1E1E1E] px-[24px] py-[8px] border border-[#292929] rounded-[10px]">
-                Frontend Developer
-              </button>
-            </li>
-            <li>
-              <button className="bg-[#1E1E1E] px-[24px] py-[8px] border border-[#292929] rounded-[10px]">
-                Backend Developer
-              </button>
-            </li>
-            <li>
-              <button className="bg-[#1E1E1E] px-[24px] py-[8px] border border-[#292929] rounded-[10px]">
-                Software Developer
-              </button>
-            </li>
+             {categoryOptions.map(category=> {
+              return(<ListCard name={category} />)
+             })}
           </ul>
 
 

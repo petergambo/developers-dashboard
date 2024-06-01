@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .border-gradient-custom {
-    @apply rounded-[10px]; /* Applying a 10px border radius */
+    @apply rounded-[10px] border; /* Applying a 10px border radius */
     position: relative;
     z-index: 0;
   }

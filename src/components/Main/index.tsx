@@ -3,10 +3,12 @@ import SearchDevsFormSection from "./SearchDevsFormSection";
 import SearchCategoriesSection from "./SearchCategoriesSection";
 import DevsListSection from "./DevsListSection";
 import PaddedContainer from "./Layout/PaddedContainer";
+import { useAppContext } from "../../context/AppContext";
 
 const Main = () => {
+  const {isCollapsed} = useAppContext();
   return (
-    <main className="flex-[10] bg-[#121212] border border-[#1E1E1E] pt-1 text-[#FEFEFE] ml-[20%]">
+    <main className={`transition-margin duration-300 bg-[#121212] border border-[#1E1E1E] pt-1 text-[#FEFEFE] ${isCollapsed ? 'ml-16' : 'ml-[20%]'}`}>
       {/* Header */}
       <HeaderSection />
 
