@@ -18,7 +18,7 @@ const DevsListSection: React.FC = () => {
       lastName: 'Gambo',
       otherNames: 'Aren',
       imageSource: 'profile-1.svg',
-      specialty: 'Software Engineering',
+      specialty: 'Software Engineer',
       address: '74, Jos Plateau state',
     });
 
@@ -28,7 +28,7 @@ const DevsListSection: React.FC = () => {
       lastName: 'Doe',
       otherNames: '',
       imageSource: 'profile-2.svg',
-      specialty: 'Data Science',
+      specialty: 'Data Scientist',
       address: '456 Elm St, Anytown, USA',
     });
 
