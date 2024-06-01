@@ -6,6 +6,8 @@ interface AppContextProps {
   setIsCollapsed: (value: boolean) => void;
   selectedSearchCategory: string | null,
   setSelectedSearchCategory: (value: string) => void,
+  selectedJobType: string | null,
+  setSelectedJobType: (value: string) => void
 }
 
 // Create the context with default values
@@ -14,6 +16,8 @@ const AppContext = createContext<AppContextProps>({
   setIsCollapsed: () => {},
   selectedSearchCategory: null,
   setSelectedSearchCategory: () => {},
+  selectedJobType: null,
+  setSelectedJobType: () => {},
   
 });
 
@@ -21,10 +25,11 @@ const AppContext = createContext<AppContextProps>({
 const AppContextProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
   const [isCollapsed, setIsCollapsed] = useState(false);
   const [selectedSearchCategory, setSelectedSearchCategory] = useState<string | null>("Frontend Developer");
+  const [selectedJobType, setSelectedJobType] = useState<string | null>("Fulltime")
 
 
   return (
-    <AppContext.Provider value={{ isCollapsed, setIsCollapsed, selectedSearchCategory, setSelectedSearchCategory }}>
+    <AppContext.Provider value={{ isCollapsed, setIsCollapsed, selectedSearchCategory, setSelectedSearchCategory, selectedJobType,  setSelectedJobType}}>
       {children}
     </AppContext.Provider>
   );

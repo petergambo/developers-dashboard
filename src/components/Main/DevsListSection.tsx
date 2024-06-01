@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
 import { Dev } from "../../models/DevModel";
 import { DevDataService } from "../../services/DevDataService";
-import DevelopersCard from "./Card";
 import './hide-scroll.css'
+import DevelopersCard from "./DevelopersCard";
+
 
 const devDataService = new DevDataService();
 
@@ -20,6 +21,22 @@ const DevsListSection: React.FC = () => {
       imageSource: 'profile-1.svg',
       specialty: 'Software Engineer',
       address: '74, Jos Plateau state',
+      hourlyRate: 320000,
+      rateCurrency: "NGN",
+      currencySign:"N"
+    });
+
+    devDataService.add({
+      id: 1,
+      firstName: 'Twinkle',
+      lastName: 'Star',
+      otherNames: 'Galaxy',
+      imageSource: 'profile-1.svg',
+      specialty: 'Graphics Designer',
+      address: 'Ohio USA',
+      hourlyRate: 90800,
+      rateCurrency: "USD",
+      currencySign: "$"
     });
 
     devDataService.add({
@@ -30,6 +47,9 @@ const DevsListSection: React.FC = () => {
       imageSource: 'profile-2.svg',
       specialty: 'Data Scientist',
       address: '456 Elm St, Anytown, USA',
+      hourlyRate: 100000,
+      rateCurrency: "NGN",
+      currencySign: "N"
     });
 
     setPersons(devDataService.getAll());

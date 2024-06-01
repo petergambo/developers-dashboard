@@ -7,4 +7,7 @@ export interface Dev {
     imageSource: string;
     specialty: string;
     address: string;
+    hourlyRate: number;
+    rateCurrency: string;
+    currencySign: string;
 }

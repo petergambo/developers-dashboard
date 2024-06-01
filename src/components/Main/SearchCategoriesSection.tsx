@@ -45,7 +45,7 @@ const ListCard: React.FC<ListCardProp>  = ({name})=>{
           </ul>
 
 
-          <button className="px-[24px] py-[8px] border border-[#292929] rounded-[10px] flex gap-1">
+          <button className="px-[24px] py-[8px] border border-[#292929] rounded-[10px] flex items-center  gap-1">
             <img src={FilterIcon} alt="Filter Icon" />
             Filters
           </button>

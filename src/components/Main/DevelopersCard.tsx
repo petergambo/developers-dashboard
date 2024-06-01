@@ -2,7 +2,7 @@
 import AdsCard from "./AdsCard";
 import DevsChildCard from "./DevsChildCard";
 import { Dev } from "../../models/DevModel";
-import HorizontalScrollWrapper from "./Layout/HorizontalScrollWrapper";
+import HorizontalScrollWrapper from "../Layout/HorizontalScrollWrapper";
 
 type DevelopersCardProps = {
   person: Dev;
@@ -29,8 +29,8 @@ const DevelopersCard: React.FC<DevelopersCardProps> = ({
             {person.firstName + " " + person.lastName}
           </h4>
           <p className="text-[#888888] mt-1 text-[14px] md:text-[16px] font-medium">
-            {person.address}
-            {"\n"} N200,000 (NGN)
+            {person.address}<br/>
+            {person.currencySign}{person.hourlyRate} ({person.rateCurrency})
           </p>
           <p className=" font-bold text-nowrap text-[12px] leading-[16px] md:text-[14px] md:leading-[20px] border border-[#FEFEFE] px-[10px] py-[4px] self-start rounded-[20px]">
             {person.specialty}
@@ -47,28 +47,24 @@ const DevelopersCard: React.FC<DevelopersCardProps> = ({
 
       {/* Portfolio Slider */}
       <HorizontalScrollWrapper>
-        <div className="flex-none w-[280px] sm:w-[50%] md:w-[320px] lg:w-[calc(33.33%-1rem)] xl:w-[calc(33.33%-1rem)]">
-          <DevsChildCard
-            title="My_Resume"
-            category="Others"
-            description="I am updating my resume, as completing my projects."
-            updatedAt={new Date(Date.now())}
-          />
-        </div>
+        <DevsChildCard
+          title="My_Resume"
+          category="Others"
+          description="I am updating my resume, as completing my projects."
+          updatedAt={new Date(Date.now())}
+        />
 
         {!isFirst && (
-          <div className="flex-none h-[152px] w-[280px] sm:w-[50%] md:w-[320px] lg:w-[calc(33.33%-1rem)] xl:w-[calc(33.33%-1rem)]">
             <AdsCard />
-          </div>
+        
         )}
-        <div className="flex-none h-[152px] w-[280px] md:w-[320px] lg:w-[calc(33.33%-1rem)] xl:w-[calc(33.33%-1rem)]">
-          <DevsChildCard
-            title="Portfolio"
-            category="Others"
-            description="Another description"
-            updatedAt={new Date(Date.now())}
-          />
-        </div>
+
+        <DevsChildCard
+          title="Portfolio"
+          category="Others"
+          description="Another description"
+          updatedAt={new Date(Date.now())}
+        />
       </HorizontalScrollWrapper>
       {/* CardEnd */}
     </div>

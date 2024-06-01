@@ -1,3 +1,8 @@
+# Project Description
+This is a responsive React web application. It is a developers dashboard and is responsive. It was implemented using the MVVM architecture
+
+# Figma file
+ Design UI/UX design file here: ['https://www.figma.com/design/zWy8WJdf4ORgnMWhJ70i5u/Tublian-Challenge?node-id=1-1433&t=ZLlxfI6iMSvMlbLG-0']
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.

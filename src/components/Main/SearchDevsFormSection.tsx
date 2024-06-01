@@ -1,6 +1,16 @@
 import SearchIcon from "../../assets/search-normal.svg";
+import { useAppContext } from "../../context/AppContext";
 
 const SearchDevsFormSection = () => {
+
+  const {selectedJobType, setSelectedJobType} = useAppContext()
+
+  const jobTypeOptions = ["Fulltime", "Freelance"]
+
+  const handleClick = (name: string) => {
+    setSelectedJobType(name);
+  };
+
     return(
     <section className="hidden md:flex gap-4">
     <div className=" bg-[#1E1E1E] border border-[#292929] flex-[9] h-[56px] rounded-[10px] flex items-center justify-between">
@@ -13,8 +23,14 @@ const SearchDevsFormSection = () => {
     </div>
 
     <div className="flex bg-[#1E1E1E] border border-[#292929] rounded-[10px] flex-[3] overflow-hidden">
-      <button className="flex-1 bg-search-btn-gradient">Fulltime</button>
-      <button className="flex-1">Freelance</button>
+      {jobTypeOptions.map(option => {
+        const isSelected:boolean = selectedJobType === option
+        return( 
+        isSelected 
+        ? <button key={option} onClick={()=>handleClick(option)} className='flex-1 bg-search-btn-gradient'>{option}</button>
+        : <button key={option} onClick={()=>handleClick(option)} className='flex-1'>{option}</button>
+        )
+      })}
     </div>
   </section>)
 }
